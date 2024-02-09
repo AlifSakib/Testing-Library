@@ -29,3 +29,19 @@ it("should provide correct sum if array of numeric string provided", () => {
   // Assertion
   expect(result).toBe(expected_result);
 });
+
+it("it should throw an error if no argument is given", () => {
+  const resultFN = () => {
+    add();
+  };
+
+  expect(resultFN).toThrow();
+});
+
+it("it should throw an error if not an array given", () => {
+  const resultFN = () => {
+    add(1, 2, 3);
+  };
+
+  expect(resultFN).toThrow(/is not iterable/i);
+});
