@@ -7,3 +7,7 @@ export function add(numbers) {
 
   return sum;
 }
+
+// TEST
+
+export const data = () => {};
